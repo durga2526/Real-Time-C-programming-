@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+    int totalMinutes;
+    int hours;
+    int minutes;
+    int remainingMinutes;
+
+    printf("Minutes to Hours and Minutes Conversion Program\n");
+
+    printf("Enter total minutes: ");
+    scanf("%d", &totalMinutes);
+
+    if(totalMinutes < 0)
+    {
+        printf("Invalid input! Minutes cannot be negative.\n");
+        return 0;
+    }
+    hours = totalMinutes / 60;
+    remainingMinutes = totalMinutes % 60;
+
+    printf("\n");
+    printf("Total Minutes Entered : %d\n", totalMinutes);
+    printf("Equivalent Hours      : %d hour(s)\n", hours);
+    printf("Remaining Minutes     : %d minute(s)\n", remainingMinutes);
+    printf("\nConversion Completed Successfully\n");
+    return 0;
+}
