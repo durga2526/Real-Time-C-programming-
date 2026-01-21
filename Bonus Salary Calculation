@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+    float basicSalary;
+    float bonusPercentage;
+    float bonusAmount;
+    float totalSalary;
+
+    printf("Salary Calculation Program\n");
+    printf("Enter basic salary: ");
+    scanf("%f", &basicSalary);
+
+    printf("Enter bonus percentage: ");
+    scanf("%f", &bonusPercentage);
+    if(basicSalary <= 0 || bonusPercentage < 0)
+    {
+        printf("Invalid input! Salary and bonus must be positive values.\n");
+        return 0;
+    }
+    bonusAmount = (basicSalary * bonusPercentage) / 100;
+    totalSalary = basicSalary + bonusAmount;
+    printf("\n");
+    printf("Basic Salary      : Rs. %.2f\n", basicSalary);
+    printf("Bonus Percentage  : %.2f %%\n", bonusPercentage);
+    printf("Bonus Amount      : Rs. %.2f\n", bonusAmount);
+    printf("Total Salary Paid : Rs. %.2f\n", totalSalary);
+    return 0;
+}
