@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+    int i;
+    int subjectCount;
+    float marks;
+    float totalMarks = 0;
+    float average;
+
+    printf("Student Average Marks Calculation Program\n");
+
+    printf("Enter number of subjects: ");
+    scanf("%d", &subjectCount);
+
+    for(i = 1; i <= subjectCount; i++)
+    {
+        printf("Enter marks for subject %d: ", i);
+        scanf("%f", &marks);
+
+        totalMarks = totalMarks + marks;
+    }
+
+    average = totalMarks / subjectCount;
+
+    printf("\n");
+    printf("Total Subjects : %d\n", subjectCount);
+    printf("Total Marks    : %.2f\n", totalMarks);
+    printf("Average Marks  : %.2f\n", average);
+    return 0;
+}
