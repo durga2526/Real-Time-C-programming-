@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+    float celsius;
+    float fahrenheit;
+
+    printf("Temperature Conversion Program\n");
+
+    printf("Enter the temperature in Celsius: ");
+    scanf("%f", &celsius);
+
+    fahrenheit = (celsius * 9 / 5) + 32;
+
+    printf("\n");
+    printf("Entered Temperature (Celsius)    : %.2f\n", celsius);
+    printf("Converted Temperature (Fahrenheit): %.2f\n", fahrenheit);
+
+    printf("Conversion completed successfully\n");
+    return 0;
+}
