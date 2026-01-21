@@ -1,0 +1,27 @@
+#include <stdio.h>
+int main()
+{
+    int itemCount, i;
+    float price;
+    float totalAmount = 0;
+
+    printf("Grocery Shop Billing Program\n");
+
+    printf("Enter the number of items purchased: ");
+    scanf("%d", &itemCount);
+
+    for(i = 1; i <= itemCount; i++)
+    {
+        printf("Enter price of item %d: ", i);
+        scanf("%f", &price);
+
+        totalAmount = totalAmount + price;
+    }
+
+    printf("\n");
+    printf("Total number of items : %d\n", itemCount);
+    printf("Total bill amount     : Rs. %.2f\n", totalAmount);
+    printf("Thank you for shopping\n");
+
+    return 0;
+}
