@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+
+struct BankAccount {
+    char name[50];
+    int accNo;
+    float balance;
+};
+
+int main() {
+    struct BankAccount acc;
+
+    printf("Manage Bank Account Details\n\n");
+
+    printf("Enter account holder name: ");
+    fgets(acc.name, sizeof(acc.name), stdin);
+    acc.name[strcspn(acc.name, "\n")] = '\0';
+
+    printf("Enter account number: ");
+    scanf("%d", &acc.accNo);
+
+    printf("Enter balance: ");
+    scanf("%f", &acc.balance);
+
+    printf("\nAccount Details:\n");
+    printf("Name: %s\n", acc.name);
+    printf("Account No: %d\n", acc.accNo);
+    printf("Balance: %.2f\n", acc.balance);
+
+    return 0;
+}
