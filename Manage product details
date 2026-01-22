@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Product {
+    char name[50];
+    int id;
+    float price;
+    int quantity;
+};
+
+int main() {
+    struct Product p;
+
+    printf("Manage Product Details\n\n");
+
+    printf("Enter product name: ");
+    fgets(p.name, sizeof(p.name), stdin);
+    p.name[strcspn(p.name, "\n")] = '\0';
+
+    printf("Enter product ID: ");
+    scanf("%d", &p.id);
+
+    printf("Enter product price: ");
+    scanf("%f", &p.price);
+
+    printf("Enter product quantity: ");
+    scanf("%d", &p.quantity);
+
+    printf("\nProduct Details:\n");
+    printf("Name: %s\n", p.name);
+    printf("ID: %d\n", p.id);
+    printf("Price: %.2f\n", p.price);
+    printf("Quantity: %d\n", p.quantity);
+
+    return 0;
+}
