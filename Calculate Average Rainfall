@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    float rainfall[7], total=0, average;
+    int i;
+
+    printf("Calculate Average Rainfall\n\n");
+
+    for(i=0;i<7;i++) {
+        printf("Enter rainfall for day %d: ", i+1);
+        scanf("%f",&rainfall[i]);
+        total += rainfall[i];
+    }
+
+    average = total / 7;
+
+    printf("\nRainfall for 7 days: ");
+    for(i=0;i<7;i++)
+        printf("%.2f ",rainfall[i]);
+    printf("\n");
+
+    printf("Average rainfall = %.2f\n", average);
+
+    return 0;
+}
