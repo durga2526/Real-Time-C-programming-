@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main()
+{
+    float costPrice;
+    float sellingPrice;
+    float difference;
+    printf("Profit or Loss Calculation Program\n");
+    printf("Enter cost price: ");
+    scanf("%f", &costPrice);
+    printf("Enter selling price: ");
+    scanf("%f", &sellingPrice);
+    if(costPrice < 0 || sellingPrice < 0)
+    {
+        printf("Invalid input\n");
+        return 0;
+    }
+    if(sellingPrice > costPrice)
+    {
+        difference = sellingPrice - costPrice;
+        printf("\nProfit: %.2f\n", difference);
+    }
+    else if(sellingPrice < costPrice)
+    {
+        difference = costPrice - sellingPrice;
+        printf("\nLoss: %.2f\n", difference);
+    }
+    else
+    {
+        printf("\nNo Profit No Loss\n");
+    }
+    return 0;
+}
