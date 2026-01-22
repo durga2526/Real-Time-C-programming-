@@ -1,0 +1,32 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Book {
+    char title[50];
+    char author[50];
+    int id;
+};
+
+int main() {
+    struct Book b;
+
+    printf("Store Library Book Details\n\n");
+
+    printf("Enter book title: ");
+    fgets(b.title, sizeof(b.title), stdin);
+    b.title[strcspn(b.title, "\n")] = '\0';
+
+    printf("Enter author name: ");
+    fgets(b.author, sizeof(b.author), stdin);
+    b.author[strcspn(b.author, "\n")] = '\0';
+
+    printf("Enter book ID: ");
+    scanf("%d", &b.id);
+
+    printf("\nBook Details:\n");
+    printf("Title: %s\n", b.title);
+    printf("Author: %s\n", b.author);
+    printf("Book ID: %d\n", b.id);
+
+    return 0;
+}
