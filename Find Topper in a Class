@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int marks[5], i, topperIndex=0;
+
+    printf("Find Topper in a Class\n\n");
+
+    for(i=0;i<5;i++) {
+        printf("Enter marks of student %d: ", i+1);
+        scanf("%d",&marks[i]);
+    }
+
+    for(i=1;i<5;i++) {
+        if(marks[i] > marks[topperIndex])
+            topperIndex = i;
+    }
+
+    printf("\nMarks of students: ");
+    for(i=0;i<5;i++)
+        printf("%d ",marks[i]);
+    printf("\n");
+
+    printf("Topper is student %d with marks %d\n", topperIndex+1, marks[topperIndex]);
+
+    return 0;
+}
