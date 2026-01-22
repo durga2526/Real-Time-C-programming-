@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+    float amount;
+    printf("Discount Eligibility Program\n");
+    printf("Enter purchase amount: ");
+    scanf("%f", &amount);
+    if(amount < 0)
+    {
+        printf("Invalid amount\n");
+        return 0;
+    }
+    if(amount >= 2000)
+    {
+        printf("\nDiscount Applicable\n");
+    }
+    else
+    {
+        printf("\nNo Discount\n");
+    }
+    return 0;
+}
