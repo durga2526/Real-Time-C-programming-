@@ -1,0 +1,39 @@
+#include <stdio.h>
+#include <string.h>
+
+struct BusTicket {
+    char passengerName[50];
+    int ticketNo;
+    char source[50];
+    char destination[50];
+};
+
+int main() {
+    struct BusTicket t;
+
+    printf("Store Bus Ticket Details\n\n");
+
+    printf("Enter passenger name: ");
+    fgets(t.passengerName, sizeof(t.passengerName), stdin);
+    t.passengerName[strcspn(t.passengerName, "\n")] = '\0';
+
+    printf("Enter ticket number: ");
+    scanf("%d", &t.ticketNo);
+    getchar(); // consume newline
+
+    printf("Enter source: ");
+    fgets(t.source, sizeof(t.source), stdin);
+    t.source[strcspn(t.source, "\n")] = '\0';
+
+    printf("Enter destination: ");
+    fgets(t.destination, sizeof(t.destination), stdin);
+    t.destination[strcspn(t.destination, "\n")] = '\0';
+
+    printf("\nBus Ticket Details:\n");
+    printf("Passenger Name: %s\n", t.passengerName);
+    printf("Ticket No: %d\n", t.ticketNo);
+    printf("Source: %s\n", t.source);
+    printf("Destination: %s\n", t.destination);
+
+    return 0;
+}
