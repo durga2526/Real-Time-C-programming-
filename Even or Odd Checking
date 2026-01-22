@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main()
+{
+    int number;
+    printf("Even or Odd Checking Program\n");
+    printf("Enter a number: ");
+    scanf("%d", &number);
+    if(number % 2 == 0)
+    {
+        printf("\nEven Number\n");
+    }
+    else
+    {
+        printf("\nOdd Number\n");
+    }
+    return 0;
+}
