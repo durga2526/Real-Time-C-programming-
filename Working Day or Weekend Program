@@ -1,0 +1,22 @@
+#include <stdio.h>
+int main()
+{
+    int day;
+    printf("Working Day or Weekend Program\n");
+    printf("Enter day number (1 to 7): ");
+    scanf("%d", &day);
+    if(day < 1 || day > 7)
+    {
+        printf("Invalid day\n");
+        return 0;
+    }
+    if(day >= 1 && day <= 5)
+    {
+        printf("\nWorking Day\n");
+    }
+    else
+    {
+        printf("\nWeekend\n");
+    }
+    return 0;
+}
