@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    float expenses[5], total=0, average;
+    int i;
+
+    printf("Calculate Monthly Expenses\n\n");
+
+    for(i=0;i<5;i++) {
+        printf("Enter expense %d: ", i+1);
+        scanf("%f",&expenses[i]);
+        total += expenses[i];
+    }
+
+    average = total / 5;
+
+    printf("\nMonthly expenses: ");
+    for(i=0;i<5;i++)
+        printf("%.2f ",expenses[i]);
+    printf("\n");
+
+    printf("Total expenses = %.2f\n", total);
+    printf("Average expense = %.2f\n", average);
+
+    return 0;
+}
