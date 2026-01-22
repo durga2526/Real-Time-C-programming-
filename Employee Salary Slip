@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+int main()
+{
+    float basicSalary;
+    float hra;
+    float da;
+    float totalSalary;
+
+    printf("Employee Salary Slip Program\n");
+
+    printf("Enter basic salary: ");
+    scanf("%f", &basicSalary);
+
+    printf("Enter HRA: ");
+    scanf("%f", &hra);
+
+    printf("Enter DA: ");
+    scanf("%f", &da);
+
+    if(basicSalary < 0 || hra < 0 || da < 0)
+    {
+        printf("Invalid input\n");
+        return 0;
+    }
+
+    totalSalary = basicSalary + hra + da;
+
+    printf("\n");
+    printf("Basic Salary : %.2f\n", basicSalary);
+    printf("HRA          : %.2f\n", hra);
+    printf("DA           : %.2f\n", da);
+    printf("Total Salary : %.2f\n", totalSalary);
+
+    return 0;
+}
