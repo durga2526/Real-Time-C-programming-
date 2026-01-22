@@ -1,0 +1,20 @@
+#include <stdio.h>
+int main()
+{
+int totalDays,leaveDays,workedDays;
+
+printf("Days Worked Calculation Program\n");
+printf("Enter total days in month: ");
+scanf("%d",&totalDays);
+printf("Enter number of leave days: ");
+scanf("%d",&leaveDays);
+
+if(totalDays<=0||leaveDays<0||leaveDays>totalDays)
+{
+printf("Invalid input\n");
+return 0;
+}
+workedDays=totalDays-leaveDays;
+printf("Days Worked: %d\n",workedDays);
+return 0;
+}
