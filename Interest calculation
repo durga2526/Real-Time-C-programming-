@@ -1,0 +1,36 @@
+#include <stdio.h>
+
+float calculateInterest(float p, float r, float t) {
+    float interest;
+    interest = (p * r * t) / 100;
+    return interest;
+}
+
+int main() {
+    float principal, rate, time;
+    float interest, total;
+
+    printf("Calculate Interest Using Function\n\n");
+
+    printf("Enter principal amount: ");
+    scanf("%f", &principal);
+
+    printf("Enter rate of interest: ");
+    scanf("%f", &rate);
+
+    printf("Enter time (in years): ");
+    scanf("%f", &time);
+
+    printf("\nEntered details:\n");
+    printf("Principal = %.2f\n", principal);
+    printf("Rate = %.2f\n", rate);
+    printf("Time = %.2f years\n", time);
+
+    interest = calculateInterest(principal, rate, time);
+    total = principal + interest;
+
+    printf("\nInterest = %.2f\n", interest);
+    printf("Total amount = %.2f\n", total);
+
+    return 0;
+}
