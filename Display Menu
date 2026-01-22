@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+void displayMenu() {
+    printf("\nMenu Options:\n");
+    printf("1. Add\n");
+    printf("2. Subtract\n");
+    printf("3. Multiply\n");
+    printf("4. Exit\n");
+}
+
+int main() {
+    int choice;
+
+    printf("Display Menu Using Function\n\n");
+
+    displayMenu();
+
+    printf("\nEnter your choice: ");
+    scanf("%d", &choice);
+
+    if(choice == 1)
+        printf("You selected Add\n");
+    else if(choice == 2)
+        printf("You selected Subtract\n");
+    else if(choice == 3)
+        printf("You selected Multiply\n");
+    else if(choice == 4)
+        printf("Exit selected\n");
+    else
+        printf("Invalid choice\n");
+
+    return 0;
+}
