@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    float sale, total = 0;
+
+    printf("Daily Sales Report\n\n");
+
+    printf("Enter number of sales: ");
+    scanf("%d", &n);
+
+    for(i = 1; i <= n; i++) {
+        printf("Enter sale amount %d: ", i);
+        scanf("%f", &sale);
+        total += sale;
+    }
+
+    printf("\nTotal Sales: %.2f\n", total);
+    printf("Report Generated\n");
+
+    return 0;
+}
