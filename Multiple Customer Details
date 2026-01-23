@@ -1,0 +1,46 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Customer {
+    int id;
+    char name[30];
+    char mobile[15];
+};
+
+int main() {
+    struct Customer c[20];
+    int n, i, searchId, found = 0;
+
+    printf("Customer Details Search\n\n");
+
+    printf("Enter number of customers: ");
+    scanf("%d", &n);
+    getchar();
+
+    for(i = 0; i < n; i++) {
+        scanf("%d", &c[i].id);
+        getchar();
+
+        fgets(c[i].name, 30, stdin);
+        c[i].name[strcspn(c[i].name, "\n")] = '\0';
+
+        fgets(c[i].mobile, 15, stdin);
+        c[i].mobile[strcspn(c[i].mobile, "\n")] = '\0';
+    }
+
+    printf("\nEnter ID to search: ");
+    scanf("%d", &searchId);
+
+    for(i = 0; i < n; i++) {
+        if(c[i].id == searchId) {
+            printf("\n%d  %s  %s\n", c[i].id, c[i].name, c[i].mobile);
+            found = 1;
+            break;
+        }
+    }
+
+    if(!found)
+        printf("\nRecord not found\n");
+
+    return 0;
+}
