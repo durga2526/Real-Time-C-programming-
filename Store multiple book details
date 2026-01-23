@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <string.h>
+
+struct Book {
+    int id;
+    char title[30];
+    float price;
+};
+
+int main() {
+    struct Book b[3];
+    int i;
+
+    printf("Store Book Details\n\n");
+
+    for(i = 0; i < 3; i++) {
+        printf("Enter Book ID: ");
+        scanf("%d", &b[i].id);
+        getchar();
+
+        printf("Enter Title: ");
+        fgets(b[i].title, 30, stdin);
+        b[i].title[strcspn(b[i].title, "\n")] = '\0';
+
+        printf("Enter Price: ");
+        scanf("%f", &b[i].price);
+
+        printf("\n");
+    }
+
+    printf("Book List\n");
+    for(i = 0; i < 3; i++) {
+        printf("%d  %s  %.2f\n", b[i].id, b[i].title, b[i].price);
+    }
+
+    return 0;
+}
