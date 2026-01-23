@@ -1,0 +1,30 @@
+#include <stdio.h>
+
+int main() {
+    int n, i;
+    int a[50];
+    int largest, smallest;
+
+    printf("Largest and Smallest in Array\n\n");
+
+    printf("Enter number of elements: ");
+    scanf("%d", &n);
+
+    for(i = 0; i < n; i++) {
+        scanf("%d", &a[i]);
+    }
+
+    largest = smallest = a[0];
+
+    for(i = 1; i < n; i++) {
+        if(a[i] > largest)
+            largest = a[i];
+        if(a[i] < smallest)
+            smallest = a[i];
+    }
+
+    printf("\nLargest: %d\n", largest);
+    printf("Smallest: %d\n", smallest);
+
+    return 0;
+}
